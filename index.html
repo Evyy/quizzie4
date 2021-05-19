@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Quiz Project Template</title>
+	<script src="quizproject.js"></script>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="favicon.ico" rel="shortcut icon" type="image/png" />
+  
+  <link rel="manifest" href="manifest.json">
+</head>
+<body onload="loadQuestion()">
+
+<div id= "lightbox" onclick="closeLightBox()">
+	<div id="message"></div>
+  <p><a href="index.html">If you want to restart the quiz click this link</a></p>
+</div>
+
+<h2>The Quiz that decides it all!</h2>
+<p><b>Click on the answer you think is right!<br> Go quick, for once the timer elapses the page will restart saving no progress :(</b><br>
+<b>If you ever want to reset you can click the link below, the one at the bottom or directly below</b><br>
+  <b>Good Luck! (You'll need it)</b></p>
+<p id="restart"> <a href="index.html">If you want to restart the quiz click</a></p>
+
+<div class="grid-container">
+  <div class="header">
+    <div id="question">The Question</div>
+  </div>
+</div>
+  
+  <div class="left">
+    <div>
+     <div class="options" id="a" onclick="markIt('a')">A.</div>
+	   <div class="options" id="b" onclick="markIt('b')">B.</div>
+     <div class="options" id="c" onclick="markIt('c')">C.</div>
+	   <div class="options" id="d" onclick="markIt('d')">D.</div>
+  	</div>
+  </div> 
+
+  
+  <div class="right"> <img id="image" src="" alt=""></div>
+  
+  <div class="footer1">
+    <p>Score <span id="score"></span></p>
+  </div>
+  
+  <div class="footer2">
+    <div id= "countdown"></div><br><br>
+    <input type="button" value="To restart click here" onclick="document.location.reload(true)">
+  </div>
+
+</body>
+</html>
